@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Interactive Game Space</title>
+    <script type="module" crossorigin src="/assets/index-HvcHZTzZ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/Geometry-siH4ob4o.js">
+    <link rel="modulepreload" crossorigin href="/assets/canvasUtils-it3QpsY7.js">
+    <link rel="modulepreload" crossorigin href="/assets/CanvasPool-Dm4TpKZI.js">
+    <link rel="modulepreload" crossorigin href="/assets/FilterSystem-C0GYOFwc.js">
+    <link rel="modulepreload" crossorigin href="/assets/RenderTargetSystem-CEXw3aTk.js">
+    <link rel="modulepreload" crossorigin href="/assets/getTextureBatchBindGroup-DOmtaW9N.js">
+    <link rel="modulepreload" crossorigin href="/assets/CanvasRenderer-DlYsq_uG.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CXYEZLb3.css">
+  </head>
+  <body class="bg-slate-900 text-white overflow-hidden relative w-screen h-screen">
+
+    <!-- The Web Design Layer overlaid over the canvas grid -->
+    <div class="ui-layer w-full h-full p-6 flex flex-col justify-between pointer-events-none">
+      
+      <!-- Top Navigation Bar Menu -->
+      <nav class="flex justify-between items-center pointer-events-auto bg-slate-800/80 backdrop-blur p-4 rounded-xl shadow-lg">
+        <h1 class="text-xl font-bold tracking-wider">CREATIVE WORLD</h1>
+        <div class="space-x-4">
+          <button onclick="openPanel('shop')" class="hover:text-amber-400 cursor-pointer transition">Shop</button>
+          <button onclick="openPanel('portfolio')" class="hover:text-amber-400 cursor-pointer transition">Art Portfolio</button>
+        </div>
+      </nav>
+
+      <!-- Shop Popup Modal Interface Panel -->
+      <div id="shop" class="hidden pointer-events-auto bg-slate-800/95 max-w-md w-full p-6 rounded-2xl mx-auto shadow-2xl border border-slate-700">
+        <div class="flex justify-between mb-4">
+          <h2 class="text-2xl font-black">Clay Figures & Merch</h2>
+          <button onclick="closePanel('shop')" class="text-slate-400 hover:text-white">✕</button>
+        </div>
+        <div id="shop-items" class="grid grid-cols-2 gap-4 max-h-96 overflow-y-auto">
+          <!-- Populated dynamically via JavaScript fetch requests -->
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
